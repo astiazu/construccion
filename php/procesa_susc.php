@@ -3,19 +3,19 @@
 * @version 1.0
 */
 
-//echo "ingresando al formulario",$POST["subscriber-mail"];
+//echo "ingresando al formulario",$POST["email"];
 
 require("class.phpmailer.php");
 require("class.smtp.php");
 
 
 // Valores enviados desde el formulario
-if ( !isset($_POST["subscriber-mail"]) ) {
+if ( !isset($_POST["email"]) ) {
     echo ("Es necesario completar todos los datos del formulario");
 }
    $name = $_POST["name"];
    $email = $_POST["email"];
-   $mensaje = $_POST["mensaje"];
+   $mensaje = $_POST["Suscripcion a la información nueva de la página web"]; 
 
    // Datos de la cuenta de correo utilizada para enviar vía SMTP
    $smtpHost = "c2480282.ferozo.com";  // Dominio alternativo brindado en el email de alta 
@@ -55,13 +55,13 @@ if ( !isset($_POST["subscriber-mail"]) ) {
         //alert("El correo fue enviado correctamente.");
         msg="El correo fue enviado correctamente a :".$emailDestino; 
         alert(("' . $msg . '"));
-        window.location.href="http://www.neigygroup.com";
+        window.location.href="http://www.neigygroup.com.ar";
         </script>';
         
    } else {
       echo'<script type="text/javascript">
         alert("Ocurrio un error en el envío del correo.");
-        window.location.href="http://www.neigygroup.com";
+        window.location.href="http://www.neigygroup.com.ar";
         </script>';
    }
 // segundo correo
@@ -93,19 +93,19 @@ if ( !isset($_POST["subscriber-mail"]) ) {
    $mail->AltBody = "{$mensaje} \n\n Formulario de ejemplo By DonWeb"; // Texto sin formato HTML
    // FIN - VALORES A MODIFICAR //
 
-   $estadoEnvio = $mail->Send(); 
+   $estadoEnvio = $mail->Send();  
    if($estadoEnvio){
       echo'<script type="text/javascript">
         //alert("El correo fue enviado correctamente a .", $emailDestino);
         msg="El correo fue enviado correctamente a :".$emailDestino; 
         alert(("' . $msg . '"));
-        window.location.href="http://www.neigygroup.com";
+        window.location.href="http://www.neigygroup.com.ar";
         </script>';
         
    } else {
       echo'<script type="text/javascript">
         alert("Ocurrio un error en el envío del correo a .", $emailDestino));
-        window.location.href="http://www.neigygroup.comW;
+        window.location.href="http://www.neigygroup.com.ar;
         </script>';
    }
 
