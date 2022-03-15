@@ -25,8 +25,8 @@ if ( !isset($_POST["name"]) || !isset($_POST["email"]) || !isset($_POST["mensaje
 
    // Datos de la cuenta de correo utilizada para enviar vía SMTP
 $smtpHost = "c2480282.ferozo.com";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "ftp@c2480282.ferozo.com";  // Mi cuenta de correo
-$smtpClave = "fero25riFO";  // Mi contraseña
+$smtpUsuario = "info@neigygroup.com.ar";  // Mi cuenta de correo
+$smtpClave = "YabGu14s";  // Mi contraseña
 
 
 // Email donde se enviaran los datos cargados en el formulario de contacto
@@ -63,12 +63,12 @@ $mail->AltBody = "{$mensaje} \n\n Formulario de ejemplo By DonWeb"; // Texto sin
 $estadoEnvio = $mail->Send(); 
 if($estadoEnvio){
    echo'<script type="text/javascript">
-      alert("El correo fue enviado correctamente nuevo ftp.");
+      alert("El correo fue enviado correctamente nuevo info@neigygroup.com.ar");
       window.location.href="http://www.neigygroup.com.ar";
       </script>';
 } else {
    echo'<script type="text/javascript">
-      alert("Ocurrio un error en el envío del correo del nuevo formulario. FTP");
+      alert("Ocurrio un error en el envío del correo del nuevo formulario. a info@neigygroup.com.ar");
       window.location.href="http://www.neigygroup.com.ar";
       </script>';
 }
