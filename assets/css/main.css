@@ -291,7 +291,10 @@ input, select, textarea {
 	}
 
 	h5 {
-		font-size: 0.7em;
+		font-family: sans-serif;
+		font-weight: 100;
+		font-size: 0.9em;
+		text-transform: none;
 	}
 
 	h6 {
