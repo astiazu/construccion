@@ -23,7 +23,9 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -3803,7 +3805,7 @@ input, select, textarea {
 				margin: 0 3em 2em 0;
 				width: 22em;
 				overflow: hidden;
-				-ms-flex: 1;
+				flex: 1;
 			}
 
 				.wrapper.spotlight .image img {
@@ -3813,7 +3815,7 @@ input, select, textarea {
 
 			.wrapper.spotlight .content {
 				width: 100%;
-				-ms-flex: 2;
+				flex: 2;
 			}
 
 			.wrapper.spotlight:nth-child(2n - 1) .inner {
@@ -4006,7 +4008,7 @@ input, select, textarea {
 
 		}
 
-/* Footer */
+/* Footer */ 
 
 	#footer .inner {
 		padding: 5em 0 3em 0 ;
@@ -4180,9 +4182,9 @@ input, select, textarea {
 		text-align: center;
 		padding: 70px 0;
 	}
-	.gravity .logo{
+	/* .gravity .logo{
 	
-	}
+	} */
 	.gravity P {
 	  	color: #d0d0d0;
 	  	font-family: "Raleway",sans-serif;
@@ -4196,73 +4198,94 @@ input, select, textarea {
 		background: red
 	}
 	#countdown {
-	  margin-top: 0px;
-	
+	  margin-top: 80px;
+	  
 	}
 	
 	.countDays{
-		position: relative;
+		position: absolute;
 		font-size: 30px;
-		left: 20px
+		left: 10px;
 	}
 	.countDays::after{
 		position: relative;
 		content: 'dias';
 		color: #fff;
 		top: 2px;
-		left: 5px;
-		font-size: 20px;
+		left: 0px;
+		font-size: 15px;
 		letter-spacing: 1px;
 		font-family: 'Raleway', sans-serif;
 		font-weight: 200;
 	}
 	.countHours{
-		position: relative;
+		position: absolute;
 		font-size: 30px;
-		left: 39px;
+		left: 90px;
 		
 	}
 	.countHours::after {
-	  color: #fff;
-	  content: "horas";
-	  font-family: "Raleway",sans-serif;
-	  font-size: 20px;
-	  font-weight: 200;
-	  left: 5px;
-	  letter-spacing: 1px;
-	  position: relative;
-	  top: 5x;
-	  padding-top: 50px;
+		position: relative;
+		content: 'horas';
+		color: #fff;
+		top: 2px;
+		left: 0px;
+		font-size: 15px;
+		letter-spacing: 1px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 200;
+
 	}
 	.countMinutes{
-		position: relative;
+		position: absolute;
 		font-size: 30px;
-		left: 60px;
+		left: 180px;
+
 	}
 	.countMinutes::after{
 		position: relative;
-		content: 'min.';
+		content: 'mins';
 		color: #fff;
-		top: 3px;
-		left: 5px;
-		font-size: 20px;
+		top: 2px;
+		left: 0px;
+		font-size: 15px;
 		letter-spacing: 1px;
 		font-family: 'Raleway', sans-serif;
 		font-weight: 200;
 	}
+
 	.countSeconds{
-		position: relative;
+		position: absolute;
 		font-size: 30px;
-		left: 80px;
+		left: 270px;
+
 	}
 	.countSeconds::after{
-		position: absolute;
-		content: 'seg.';
+		position: relative;
+		content: 'seg';
 		color: #fff;
-		top: 10px;
-		left: 50px;
-		font-size: 20px;
+		top: 2px;
+		left: 0px;
+		font-size: 15px;
 		letter-spacing: 1px;
 		font-family: 'Raleway', sans-serif;
 		font-weight: 200;
+	}
+	.container{
+		padding: 0;
+		top: 0;
+		width: 80%;
+		/* font-family: 'Impact'; */
+		display: flex;
+		justify-content: space-around;
+		
+		/* margin-top: 0; */
+		
+	}
+	.big-number{
+		background-color: rgb(122, 113, 253);;
+		font-size: 50px;
+		font-weight: 400;
+		margin-bottom: 5px;
+		margin-top: 5px;
 	}

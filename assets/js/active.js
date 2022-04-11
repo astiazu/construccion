@@ -1,16 +1,20 @@
 $(function(){
 	
 	var note = $('#note'),
-		ts = new Date(2022, 0, 1),
+		ts = new Date(2022, 4, 14);
 		newYear = true;
+		//alert(ts);
+		//alert(new Date());
+		alert('La hora cero llegará el 11 de Abril a las 11:00')
 	
-	if((new Date()) > ts){
+	if((new Date()) > ts){ 
 		// The new year is here! Count towards something else.
 		// Notice the *1000 at the end - time must be in milliseconds
-		ts = (new Date()).getTime() + 15*24*60*60*1000;
+		ts = (new Date()).getTime() + 5*24*60*60*1000;
 		newYear = false;
 	}
-		
+	// alert(ts);
+
 	$('#countdown').countdown({
 		timestamp	: ts,
 		callback	: function(days, hours, minutes, seconds){
@@ -23,10 +27,10 @@ $(function(){
 			message += seconds + " second" + ( seconds==1 ? '':'s' ) + " <br />";
 			
 			if(newYear){
-				message += "left until the new year!";
+				message += "quedan para despegar !";
 			}
 			else {
-				message += "left to 10 days from now!";
+				message += "a partir de ahora !";
 			}
 			
 			note.html(message);

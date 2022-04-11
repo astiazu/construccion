@@ -3,18 +3,22 @@ const hours = document.getElementById("hours");
 const mins = document.getElementById("mins");
 const seconds = document.getElementById("seconds");
 
-const newYear = '10 Mar 2022';
+const newYear = '11 Apr 2022 11:00';
 
 function countTimer(){
     const newYearDate = new Date(newYear);
     const currentDate = new Date();
-
     const totalSeconds = (newYearDate - currentDate) / 1000;
 
-    const daysCalc = Math.floor(totalSeconds / 3600 / 24);
-    const hoursCalc = Math.floor(totalSeconds / 3600) % 24;
-    const minsCalc = Math.floor(totalSeconds / 60) % 60;
-    const secondsCalc = Math.floor(totalSeconds % 60);
+    // const daysCalc = Math.floor(totalSeconds / 3600 / 24);
+    // const hoursCalc = Math.floor(totalSeconds / 3600) % 24;
+    // const minsCalc = Math.floor(totalSeconds / 60) % 60;
+    // const secondsCalc = Math.floor(totalSeconds % 60);
+
+    const daysCalc = 0;
+    const hoursCalc = 0;
+    const minsCalc = 0;
+    const secondsCalc = 0;
     
     days.innerHTML = daysCalc;
     hours.innerHTML = hoursCalc;
